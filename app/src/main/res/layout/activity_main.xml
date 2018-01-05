@@ -7,6 +7,104 @@
     tools:context="com.example.augappprototype.MainActivity"
     android:background="@drawable/calendarbackground">
 
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sunday"
+        app:layout_constraintGuide_begin="109dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="109dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/monday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="56dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuesday"
+        app:layout_constraintGuide_begin="328dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="328dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/wednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="273dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="273dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/thursday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="219dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="219dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/friday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="164dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="164dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline8"
+        app:layout_constraintGuide_begin="481dp"
+        android:orientation="horizontal" />
+
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/week1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="332dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/week2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="256dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/week3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="181dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/week4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="106dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="408dp" />
+
 
     <Button
         android:id="@+id/calendarButton1"
@@ -292,4 +390,5 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="403dp" />
+
 </android.support.constraint.ConstraintLayout>
