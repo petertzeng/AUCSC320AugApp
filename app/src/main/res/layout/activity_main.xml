@@ -7,35 +7,5 @@
     tools:context="com.example.augappprototype.MainActivity">
 
 
-    <Button
-        android:id="@+id/calendarButton1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="top|left"
-        android:text="1"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="88dp"
-        tools:textSize="18sp" />
 
-    <Button
-        android:id="@+id/calendarButton2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="top|left"
-        android:text="2"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="141dp"
-        tools:layout_editor_absoluteY="88dp"
-        tools:textSize="18sp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:gravity="top|left"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="88dp"
-        tools:textSize="18sp" />
 </android.support.constraint.ConstraintLayout>
