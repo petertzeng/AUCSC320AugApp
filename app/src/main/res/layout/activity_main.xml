@@ -10,14 +10,12 @@
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/sunday"
-        app:layout_constraintGuide_begin="109dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="109dp" />
+        android:id="@+id/monday"
+        app:layout_constraintGuide_begin="106dp"
+        android:orientation="vertical" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/monday"
+        android:id="@+id/sunday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -28,14 +26,14 @@
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tuesday"
+        android:id="@+id/friday"
         app:layout_constraintGuide_begin="328dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="328dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/wednesday"
+        android:id="@+id/thursday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -44,7 +42,7 @@
         tools:layout_editor_absoluteX="273dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/thursday"
+        android:id="@+id/wednesday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -53,25 +51,23 @@
         tools:layout_editor_absoluteX="219dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/friday"
+        android:id="@+id/tuesday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="164dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="164dp" />
+        app:layout_constraintGuide_begin="166dp" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline8"
+        android:id="@+id/bottom"
         app:layout_constraintGuide_begin="481dp"
         android:orientation="horizontal" />
 
 
 
     <android.support.constraint.Guideline
-        android:id="@+id/week1"
+        android:id="@+id/week3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -85,21 +81,21 @@
         app:layout_constraintGuide_begin="256dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/week3"
+        android:id="@+id/week1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="181dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/week4"
+        android:id="@+id/top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="106dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/bottom"
+        android:id="@+id/week4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -112,283 +108,351 @@
         android:layout_height="80dp"
         android:text="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintRight_toRightOf="@id/sunday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton2"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="182dp" />
+        android:text="2"
+        app:layout_constraintLeft_toLeftOf="@id/sunday"
+        app:layout_constraintRight_toLeftOf="@id/monday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton3"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
+        android:text="3"
         tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="102dp" />
+        tools:layout_editor_absoluteY="102dp"
+        app:layout_constraintLeft_toLeftOf="@id/monday"
+        app:layout_constraintRight_toRightOf="@id/tuesday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top"/>
 
     <Button
         android:id="@+id/calendarButton4"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="4"
+        app:layout_constraintLeft_toLeftOf="@id/tuesday"
+        app:layout_constraintRight_toRightOf="@id/wednesday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton5"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="5"
+        app:layout_constraintLeft_toLeftOf="@id/wednesday"
+        app:layout_constraintRight_toRightOf="@id/thursday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton6"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="6"
+        app:layout_constraintLeft_toLeftOf="@id/thursday"
+        app:layout_constraintRight_toRightOf="@id/friday"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton7"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="182dp" />
+        android:text="7"
+        app:layout_constraintLeft_toLeftOf="@id/friday"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/week1"
+        app:layout_constraintTop_toBottomOf="@id/top" />
 
     <Button
         android:id="@+id/calendarButton8"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="182dp" />
+        android:text="8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/sunday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton9"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="9"
+        app:layout_constraintLeft_toLeftOf="@id/sunday"
+        app:layout_constraintRight_toRightOf="@id/monday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton10"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="10"
+        app:layout_constraintLeft_toLeftOf="@id/monday"
+        app:layout_constraintRight_toRightOf="@id/tuesday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton11"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="11"
+        app:layout_constraintLeft_toLeftOf="@id/tuesday"
+        app:layout_constraintRight_toRightOf="@id/wednesday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton12"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="12"
+        app:layout_constraintLeft_toLeftOf="@id/wednesday"
+        app:layout_constraintRight_toRightOf="@id/thursday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton13"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="13"
+        app:layout_constraintLeft_toLeftOf="@id/thursday"
+        app:layout_constraintRight_toRightOf="@id/friday"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1"/>
 
     <Button
         android:id="@+id/calendarButton14"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="14"
+        app:layout_constraintLeft_toLeftOf="@id/friday"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/week2"
+        app:layout_constraintTop_toBottomOf="@id/week1" />
 
     <Button
         android:id="@+id/calendarButton15"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/sunday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton16"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
+        android:text="16"
         tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="182dp" />
+        app:layout_constraintLeft_toLeftOf="@id/sunday"
+        app:layout_constraintRight_toRightOf="@id/monday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton17"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="182dp" />
+        android:text="17"
+        app:layout_constraintLeft_toLeftOf="@id/monday"
+        app:layout_constraintRight_toRightOf="@id/tuesday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton18"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="225dp"
-        tools:layout_editor_absoluteY="182dp" />
+        android:text="18"
+        app:layout_constraintLeft_toLeftOf="@id/tuesday"
+        app:layout_constraintRight_toRightOf="@id/wednesday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton19"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="19"
+        app:layout_constraintLeft_toLeftOf="@id/wednesday"
+        app:layout_constraintRight_toRightOf="@id/thursday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton20"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="20"
+        app:layout_constraintLeft_toLeftOf="@id/thursday"
+        app:layout_constraintRight_toRightOf="@id/friday"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton21"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="21"
+        app:layout_constraintLeft_toLeftOf="@id/friday"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/week3"
+        app:layout_constraintTop_toBottomOf="@id/week2" />
 
     <Button
         android:id="@+id/calendarButton22"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="22"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/sunday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3" />
 
     <Button
         android:id="@+id/calendarButton23"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="23"
+        app:layout_constraintLeft_toLeftOf="@id/sunday"
+        app:layout_constraintRight_toRightOf="@id/monday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3" />
 
     <Button
         android:id="@+id/calendarButton24"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="24"
+        app:layout_constraintLeft_toLeftOf="@id/monday"
+        app:layout_constraintRight_toRightOf="@id/tuesday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3" />
 
     <Button
         android:id="@+id/calendarButton25"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="25"
+        app:layout_constraintLeft_toLeftOf="@id/tuesday"
+        app:layout_constraintRight_toRightOf="@id/wednesday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3"/>
 
     <Button
         android:id="@+id/calendarButton26"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="25"
+        app:layout_constraintLeft_toLeftOf="@id/wednesday"
+        app:layout_constraintRight_toRightOf="@id/thursday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3"/>
 
     <Button
         android:id="@+id/calendarButton27"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="27"
+        app:layout_constraintLeft_toLeftOf="@id/thursday"
+        app:layout_constraintRight_toRightOf="@id/friday"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3" />
 
     <Button
         android:id="@+id/calendarButton28"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="335dp" />
+        android:text="27"
+        app:layout_constraintLeft_toLeftOf="@id/friday"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/week4"
+        app:layout_constraintTop_toBottomOf="@id/week3"/>
 
     <Button
         android:id="@+id/calendarButton29"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="29"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/sunday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton30"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="255dp" />
+        android:text="30"
+        app:layout_constraintLeft_toLeftOf="@id/sunday"
+        app:layout_constraintRight_toRightOf="@id/monday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton31"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="102dp" />
+        android:text="31"
+        app:layout_constraintLeft_toLeftOf="@id/monday"
+        app:layout_constraintRight_toRightOf="@id/tuesday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton32"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="329dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="32"
+        app:layout_constraintLeft_toLeftOf="@id/tuesday"
+        app:layout_constraintRight_toRightOf="@id/wednesday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton33"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="33"
+        app:layout_constraintLeft_toLeftOf="@id/wednesday"
+        app:layout_constraintRight_toRightOf="@id/thursday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton34"
         android:layout_width="52dp"
         android:layout_height="80dp"
-        android:text="1"
-        tools:layout_editor_absoluteX="218dp"
-        tools:layout_editor_absoluteY="403dp" />
+        android:text="34"
+        app:layout_constraintLeft_toLeftOf="@id/thursday"
+        app:layout_constraintRight_toRightOf="@id/friday"
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
     <Button
         android:id="@+id/calendarButton35"
         android:layout_width="52dp"
         android:layout_height="80dp"
         android:text="35"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/friday"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="403dp" />
+        app:layout_constraintBottom_toBottomOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/week4" />
 
 </android.support.constraint.ConstraintLayout>
