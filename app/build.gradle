@@ -29,6 +29,7 @@ dependencies {
     compile 'com.applandeo:material-calendar-view:1.4.0'
     compile 'com.prolificinteractive:material-calendarview:1.4.3'
     compile 'com.github.sundeepk:compact-calendar-view:2.0.2.2'
+    compile 'me.grantland:autofittextview:0.2.+'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:gridlayout-v7:26.+'
 }
