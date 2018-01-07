@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements DayViewDecorator 
                 .setMinimumDate(CalendarDay.from(2017, 12, 31))
                 .setMaximumDate(CalendarDay.from(2018, 12, 31))
                 .commit();
-        materialCalendar.setDynamicHeightEnabled(true);
+        materialCalendar.addDecorators(new CurrentDayDecorator(this));
     }
 
 
