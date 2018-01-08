@@ -40,11 +40,14 @@ public class LoginButtonListener implements View.OnClickListener{
 
     public void confirmLogin(String username, String password){
         if (password.equals(passwords.get(username))){
-
             Intent k = new Intent(loginScreen, MainActivity.class);
             loginScreen.startActivity(k);
-            Toast.makeText(loginScreen, "Login Successful!",
-                    Toast.LENGTH_LONG).show();
+            if (permissions.get(username).equals("faculty"))
+                Toast.makeText(loginScreen, "Logged in as a faculty member",
+                        Toast.LENGTH_LONG).show();
+            else
+                Toast.makeText(loginScreen, "Logged in as a student",
+                        Toast.LENGTH_LONG).show();
         }
         else{
             Toast.makeText(loginScreen, "Login Failed!",
