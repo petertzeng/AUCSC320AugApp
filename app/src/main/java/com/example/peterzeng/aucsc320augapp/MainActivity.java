@@ -18,6 +18,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.Status;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
     GoogleApiClient.OnConnectionFailedListener {
@@ -57,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   @Override
   public void onClick(View v) {
-
     switch (v.getId()) {
       case R.id.login_button:
         signIn();
@@ -66,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signOut();
         break;
     } // switch(View)
-
   } // onClick(View)
 
   @Override
@@ -80,7 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   } // signIn()
 
   private void signOut() {
-
+    Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
+      @Override
+      public void onResult(@NonNull Status status) {
+        updateUI(false);
+      }
+    });
   } // signOut()
 
   private void handleSignInResult(GoogleSignInResult result) {
