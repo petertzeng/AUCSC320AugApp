@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   private void signIn() {
     Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+    startActivityForResult(intent, REQUEST_CODE);
   } // signIn()
 
   private void signOut() {
@@ -84,5 +85,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   private void updateUI(boolean isLogin) {
 
   } // updateUI
+
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
+  }
 
 } // MainActivity
