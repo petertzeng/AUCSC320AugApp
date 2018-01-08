@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -16,11 +17,11 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
     GoogleApiClient.OnConnectionFailedListener {
 
-  private Button signOut;
+  private Button signOutButton;
   private GoogleApiClient googleApiClient;
   private ImageView profilePicture;
   private LinearLayout profileSection;
-  private SignInButton signIn;
+  private SignInButton signInButton;
   private TextView email;
   private TextView name;
   private static final int REQUEST_CODE = 9001;
@@ -31,15 +32,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
     profileSection = (LinearLayout)findViewById(R.id.profile_section);
-    signOut = (Button)findViewById(R.id.logout_button);
-    signIn = (SignInButton)findViewById(R.id.login_button);
+    signOutButton = (Button)findViewById(R.id.logout_button);
+    signInButton = (SignInButton)findViewById(R.id.login_button);
     name = (TextView)findViewById(R.id.name);
     email = (TextView)findViewById(R.id.email);
     profilePicture = (ImageView)findViewById(R.id.profile_picture);
-    signIn.setOnClickListener(this);
-    signOut.setOnClickListener(this);
-
-
+    signInButton.setOnClickListener(this);
+    signOutButton.setOnClickListener(this);
+    profileSection.setVisibility(View.GONE);
   } // onCreate(Bundle)
 
   @Override
@@ -51,5 +51,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
   } // onConnectionFailed(ConnectionResult)
+
+  private void signIn() {
+
+  } // signIn()
+
+  private void signOut() {
+
+  } // signOut()
+
+  private void handleSignInResult(GoogleSignInResult result) {
+
+  } // handleSignInResult(GoogleSignInResult)
 
 } // MainActivity
