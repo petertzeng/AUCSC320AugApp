@@ -90,12 +90,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       email.setText(userEmail);
       Glide.with(this).load(imgURL).into(profilePicture);
           // gitHub extension for loading profile pictures
-
-    } // if
+      updateUI(true);
+    } else {
+      updateUI(false);
+    } // else
   } // handleSignInResult(GoogleSignInResult)
 
   private void updateUI(boolean isLogin) {
-
+    if(isLogin) {
+      profileSection.setVisibility(View.VISIBLE);
+      signInButton.setVisibility(View.GONE);
+    } else {
+      profileSection.setVisibility(View.GONE);
+      signInButton.setVisibility(View.VISIBLE);
+    } // else
   } // updateUI
 
   @Override
