@@ -1,5 +1,6 @@
 package com.example.peterzeng.aucsc320augapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
@@ -31,19 +34,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
-    profileSection = (LinearLayout)findViewById(R.id.profile_section);
-    signOutButton = (Button)findViewById(R.id.logout_button);
-    signInButton = (SignInButton)findViewById(R.id.login_button);
-    name = (TextView)findViewById(R.id.name);
-    email = (TextView)findViewById(R.id.email);
-    profilePicture = (ImageView)findViewById(R.id.profile_picture);
+
+    profileSection = (LinearLayout) findViewById(R.id.profile_section);
+    signOutButton = (Button) findViewById(R.id.logout_button);
+    signInButton = (SignInButton) findViewById(R.id.login_button);
+    name = (TextView) findViewById(R.id.name);
+    email = (TextView) findViewById(R.id.email);
+    profilePicture = (ImageView) findViewById(R.id.profile_picture);
+
     signInButton.setOnClickListener(this);
     signOutButton.setOnClickListener(this);
     profileSection.setVisibility(View.GONE);
+
+    GoogleSignInOptions signInOptions =
+        new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+
+    googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,
+        this).addApi(Auth.GOOGLE_SIGN_IN_API, signInOptions).build();
   } // onCreate(Bundle)
 
   @Override
   public void onClick(View v) {
+
+    switch (v.getId()) {
+      case R.id.login_button:
+        signIn();
+        break;
+    } // switch(View)
 
   } // onClick(View)
 
@@ -53,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   } // onConnectionFailed(ConnectionResult)
 
   private void signIn() {
-
+    Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
   } // signIn()
 
   private void signOut() {
