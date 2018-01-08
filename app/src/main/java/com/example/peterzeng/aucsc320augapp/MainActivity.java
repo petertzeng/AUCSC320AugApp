@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -87,6 +88,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       String imgURL = account.getPhotoUrl().toString();
       name.setText(userName);
       email.setText(userEmail);
+      Glide.with(this).load(imgURL).into(profilePicture);
+          // gitHub extension for loading profile pictures
+
     } // if
   } // handleSignInResult(GoogleSignInResult)
 
