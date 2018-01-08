@@ -1,5 +1,6 @@
 package com.example.augappprototype;
 
+import android.app.Dialog;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 import com.example.augappprototype.Listeners.AddEventListener;
 import com.example.augappprototype.Listeners.CalendarButtonListener;
+import com.example.augappprototype.Listeners.CategoryButtonListener;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.addEventButton).setOnClickListener(new AddEventListener(this));
+        findViewById(R.id.categoryButton).setOnClickListener(new CategoryButtonListener(this));
         convertCalendar();
 
     }
