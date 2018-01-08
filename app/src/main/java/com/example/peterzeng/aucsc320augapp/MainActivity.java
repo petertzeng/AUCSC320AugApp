@@ -62,6 +62,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       case R.id.login_button:
         signIn();
         break;
+      case R.id.logout_button:
+        signOut();
+        break;
     } // switch(View)
 
   } // onClick(View)
