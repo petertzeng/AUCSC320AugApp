@@ -15,7 +15,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/wsoc" android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/wsoc"  />
 
     <ImageView
         android:id="@+id/vikingsLogo"
@@ -27,7 +27,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:srcCompat="@drawable/vikings" android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/vikings"  />
 
     <Button
         android:id="@+id/continueAsGuestButton"
