@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.augappprototype.MainActivity">
 
+    <CalendarView
+        android:id="@+id/calendar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top"
+        tools:layout_editor_absoluteY="176dp" />
 
     <ImageView
         android:id="@+id/top"
@@ -19,20 +28,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/calendarView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-
-        app:layout_constraintBottom_toTopOf="@id/bottom"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/top"
-        app:mcv_arrowColor="#E51937"
-        app:mcv_selectionColor="#E51937"
-        app:mcv_showOtherDates="all" />
-
-
     <ImageView
         android:id="@+id/bottom"
         android:layout_width="fill_parent"
@@ -43,6 +38,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>
