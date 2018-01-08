@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.auth.api.signin.GoogleSignInResult;
 import com.google.android.gms.common.ConnectionResult;
@@ -79,7 +80,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
   } // signOut()
 
   private void handleSignInResult(GoogleSignInResult result) {
-
+    if(result.isSuccess()){
+      GoogleSignInAccount account = result.getSignInAccount();
+      String userName = account.getDisplayName();
+      String userEmail = account.getEmail();
+      String imgURL = account.getPhotoUrl().toString();
+      name.setText(userName);
+      email.setText(userEmail);
+    } // if
   } // handleSignInResult(GoogleSignInResult)
 
   private void updateUI(boolean isLogin) {
