@@ -52,6 +52,13 @@
             android:gravity="center">
         </TextView>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Log out from Google"
+            android:id="@+id/logout_button">
+        </Button>
+
     </LinearLayout>
 
 </LinearLayout>
