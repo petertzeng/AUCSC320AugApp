@@ -8,7 +8,7 @@
     tools:context="com.example.peterzeng.aucsc320augapp.MainActivity">
 
     <LinearLayout
-        android:id="@+id/prof_section"
+        android:id="@+id/profile_section"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -18,7 +18,7 @@
         <ImageView
             android:id="@+id/profile_picture"
             android:layout_width="90dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:src="@drawable/picture" />
 
         <LinearLayout
