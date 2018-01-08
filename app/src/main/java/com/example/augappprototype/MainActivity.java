@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.augappprototype.Listeners.AddEventListener;
+import com.example.augappprototype.Listeners.CalendarButtonListener;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViewById(R.id.addEventButton).setOnClickListener(new AddEventListener(this));
         convertCalendar();
 
     }
@@ -43,15 +46,7 @@ public class MainActivity extends AppCompatActivity {
         caldroidFragment.setMinDate(firstDate1);
         caldroidFragment.setMaxDate(firstDate2);
 
-        final CaldroidListener listener = new CaldroidListener() {
-            @Override
-            public void onSelectDate(Date date, View view) {
-                Toast.makeText(getApplicationContext(), "lol",
-                        Toast.LENGTH_SHORT).show();
-            }
-        };
-
-        caldroidFragment.setCaldroidListener(listener);
+        caldroidFragment.setCaldroidListener(new CalendarButtonListener(this));
 
     }
 }
