@@ -1,9 +1,11 @@
 package com.example.augappprototype.Listeners;
 
+import android.app.Dialog;
 import android.view.View;
 import android.widget.Toast;
 
 import com.example.augappprototype.MainActivity;
+import com.example.augappprototype.R;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -30,12 +32,18 @@ public class AddEventListener implements View.OnClickListener {
     }
 
     public void addEvents(){
+        /**
         eventDetails.add(0, "Augustana");
         eventDetails.add(1, "Basketball Game");
         eventDetails.add(2, "Dennis Didusenko gonna dunk on mfers");
         events.put(new Date(118, 0, 1), eventDetails);
         Toast.makeText(mainActivity, "Event Added",
                 Toast.LENGTH_SHORT).show();
+         */
+
+        final Dialog addEventDialog = new Dialog(mainActivity);
+        addEventDialog.setContentView(R.layout.addeventpopup);
+        addEventDialog.show();
     }
 
     public HashMap getEvents(){
