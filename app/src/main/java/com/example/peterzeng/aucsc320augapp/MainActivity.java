@@ -64,4 +64,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
   } // handleSignInResult(GoogleSignInResult)
 
+  private void updateUI(boolean isLogin) {
+
+  } // updateUI
+
 } // MainActivity
