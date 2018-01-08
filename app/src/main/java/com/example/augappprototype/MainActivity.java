@@ -1,22 +1,16 @@
 package com.example.augappprototype;
 
-import android.app.Dialog;
-import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
-import com.prolificinteractive.materialcalendarview.CalendarDay;
-import com.prolificinteractive.materialcalendarview.CalendarMode;
-import com.prolificinteractive.materialcalendarview.DayViewDecorator;
-import com.prolificinteractive.materialcalendarview.DayViewFacade;
-import com.prolificinteractive.materialcalendarview.MaterialCalendarView;
-import com.prolificinteractive.materialcalendarview.OnDateSelectedListener;
 import com.roomorama.caldroid.CaldroidFragment;
+import com.roomorama.caldroid.CaldroidListener;
 
 import java.util.Calendar;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        convertCalendar();
+
+    }
+
+    private void convertCalendar() {
 
         CaldroidFragment caldroidFragment = new CaldroidFragment();
         Bundle args = new Bundle();
@@ -33,8 +32,26 @@ public class MainActivity extends AppCompatActivity {
         args.putInt(CaldroidFragment.YEAR, cal.get(Calendar.YEAR));
         caldroidFragment.setArguments(args);
 
+
         FragmentTransaction t = getSupportFragmentManager().beginTransaction();
         t.replace(R.id.calendar1, caldroidFragment);
         t.commit();
+
+
+        Date firstDate1 = new Date(1514790000000L);
+        Date firstDate2 = new Date(1546300800000L);
+        caldroidFragment.setMinDate(firstDate1);
+        caldroidFragment.setMaxDate(firstDate2);
+
+        final CaldroidListener listener = new CaldroidListener() {
+            @Override
+            public void onSelectDate(Date date, View view) {
+                Toast.makeText(getApplicationContext(), "lol",
+                        Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        caldroidFragment.setCaldroidListener(listener);
+
     }
 }
