@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -15,12 +16,13 @@ import com.google.android.gms.common.api.GoogleApiClient;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
     GoogleApiClient.OnConnectionFailedListener {
 
-  private LinearLayout profileSection;
   private Button signOut;
-  private SignInButton signIn;
-  private TextView name;
-  private TextView profilePicture;
   private GoogleApiClient googleApiClient;
+  private ImageView profilePicture;
+  private LinearLayout profileSection;
+  private SignInButton signIn;
+  private TextView email;
+  private TextView name;
   private static final int REQUEST_CODE = 9001;
 
 
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     profileSection = (LinearLayout)findViewById(R.id.profile_section);
     signOut = (Button)findViewById(R.id.logout_button);
     signIn = (SignInButton)findViewById(R.id.login_button);
+    name = (TextView)findViewById(R.id.name);
+    email = (TextView)findViewById(R.id.email);
+    profilePicture = (ImageView)findViewById(R.id.profile_picture);
+    signIn.setOnClickListener(this);
+    signOut.setOnClickListener(this);
+
 
   } // onCreate(Bundle)
 
