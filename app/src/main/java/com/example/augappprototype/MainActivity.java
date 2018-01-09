@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.addEventButton).setOnClickListener(new AddEventListener(this));
         findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
-
     }
 
     private void convertCalendar() {

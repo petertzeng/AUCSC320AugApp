@@ -98,6 +98,7 @@
         android:inputType="textMultiLine"
         android:maxLength="150"
         android:maxLines="5"
+        android:lines="5"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toTopOf="@id/closeWindow"
         app:layout_constraintLeft_toRightOf="@+id/descriptionIcon"
@@ -121,13 +122,12 @@
         android:id="@+id/descriptionIcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@id/eventDescription"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/eventDescription"
-        app:layout_constraintBottom_toBottomOf="@id/eventDescription"
         app:layout_constraintTop_toBottomOf="@id/eventLocation"
-        app:layout_constraintVertical_bias="0.476"
-        app:srcCompat="@drawable/descriptionicon"
-        tools:layout_editor_absoluteX="282dp" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/descriptionicon" />
 
 
 </android.support.constraint.ConstraintLayout>
