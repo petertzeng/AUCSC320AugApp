@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.augappprototype.Listeners.AddEventListener;
 import com.example.augappprototype.Listeners.CalendarButtonListener;
+import com.example.augappprototype.Listeners.EditEventButtonListener;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViewById(R.id.addEventButton).setOnClickListener(new AddEventListener(this));
+        findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
 
     }
