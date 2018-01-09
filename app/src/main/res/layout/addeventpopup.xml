@@ -6,24 +6,17 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <TextView
+    <ImageView
         android:id="@+id/eventBanner"
         android:layout_width="fill_parent"
         android:layout_height="73dp"
         android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
         android:background="@drawable/taskbar"
-        android:gravity="center|left"
-        android:scaleType="centerCrop"
-        android:text="  Select A Date"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/closeWindow"
@@ -73,6 +66,29 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Select A Date"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/eventBanner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"/>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/calendaricon"
+        app:layout_constraintBottom_toBottomOf="@id/eventBanner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

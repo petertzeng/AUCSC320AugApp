@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
@@ -24,8 +25,17 @@ public class AddEventListener implements View.OnClickListener {
     private int day;
     private int month;
     private int year;
+    private int minute;
+    private int hour;
     private String step;
     private final MainActivity mainActivity;
+    private String amOrPm;
+    EditText titleBox;
+    EditText locationBox;
+    EditText descriptionBox;
+    String eventTitle;
+    String eventDescription;
+    String eventLocation;
 
 
     public AddEventListener(MainActivity mainActivity){
@@ -75,45 +85,89 @@ public class AddEventListener implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 if (step == "date") {
-                    year = eventDate.getYear();
-                    month = eventDate.getMonth();
-                    day = eventDate.getDayOfMonth();
+                    saveEventDate(eventDate);
                     addEvents.dismiss();
-                    openEventDetails();
+                    openEventTime();
                     step = "time";
                 }
                 else if (step == "time"){
-                    int minute = eventTime.getCurrentMinute();
-                    int hour = eventTime.getCurrentHour();
+                    saveEventTime(eventTime);
+                    addEvents.dismiss();
+                    openEventDetails();
+                    step = "details";
+                }
+                else
                     addEvents.dismiss();
 
-
-                }
             }
         });
+    }
 
+    public void saveEventDate(DatePicker datePicker){
+        year = datePicker.getYear() - 1900;
+        month = datePicker.getMonth();
+        day = datePicker.getDayOfMonth();
+    }
+
+    public void saveEventTime(TimePicker timePicker){
+        minute = timePicker.getCurrentMinute();
+        hour = timePicker.getCurrentHour();
+        amOrPm = checkAmOrPm(hour);
+    }
+
+    public void saveEventDetails(EditText title, EditText location, EditText description){
+        eventTitle = title.getText().toString();
+        eventDescription = description.getText().toString();
+        eventLocation = location.getText().toString();
+    }
+
+
+    public void openEventTime(){
+        final Dialog addEventDialog = new Dialog(mainActivity);
+        addEventDialog.setContentView(R.layout.addeventtime);
+        addEventDialog.show();
+        continueButtonListener(addEventDialog);
+        closeWindowListener(addEventDialog);
     }
 
     public void openEventDetails(){
         final Dialog addEventDialog = new Dialog(mainActivity);
-        addEventDialog.setContentView(R.layout.addeventtime);
+        addEventDialog.setContentView(R.layout.addeventdetails);
         addEventDialog.show();
+        addEventButtonListener(addEventDialog);
+        closeWindowListener(addEventDialog);
+        locationBox = addEventDialog.findViewById(R.id.eventLocation);
+        descriptionBox = addEventDialog.findViewById(R.id.eventDescription);
+        titleBox = addEventDialog.findViewById(R.id.eventTitle);
+    }
+
+    public void addEventButtonListener(final Dialog addEvents){
+        Button continueButton = addEvents.findViewById(R.id.submitEvent);
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                saveEventDetails(titleBox, locationBox, descriptionBox);
+                eventDetails.add(0, eventLocation);
+                eventDetails.add(1, eventTitle);
+                eventDetails.add(2, eventDescription);
+                events.put(new Date(year, month, day), eventDetails);
+                Toast.makeText(mainActivity, "lol" + events,
+                        Toast.LENGTH_SHORT).show();
+                addEvents.dismiss();
+            }
+        });
+    }
+
+    private String checkAmOrPm(int hourOfDay){
+        if (hourOfDay < 12)
+            return "AM";
+        else
+            return "PM";
+
+    }
+    public Date convertDate(Date date){
+        return new Date(date.getYear(), date.getMonth(), date.getDate());
     }
 
 
-    public int getMonth(){
-        return month;
-    }
-
-    public int getDay(){
-        return day;
-    }
-
-    public int getYear(){
-        return year;
-    }
-
-    public HashMap getEvents(){
-        return events;
-    }
 }
