@@ -32,7 +32,7 @@
         android:layout_width="fill_parent"
         android:layout_height="73dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/taskbar"
+        android:background="@drawable/bottom"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -68,8 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addeventimage"
-        tools:layout_editor_absoluteY="548dp" />
+        app:layout_constraintTop_toBottomOf="@+id/addeventimage" />
 
     <ImageView
         android:id="@+id/addeventimage"
@@ -84,6 +83,42 @@
         app:layout_constraintTop_toTopOf="@+id/addEventButton"
         app:srcCompat="@drawable/plus" />
 
+    <Button
+        android:id="@+id/editEventButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/caldroid_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/bottom" />
+
+    <ImageView
+        android:id="@+id/editEventIcon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@id/editEventButton"
+        app:layout_constraintBottom_toTopOf="@+id/addeventtext"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/addEventButton"
+        app:srcCompat="@drawable/editevent" />
+
+    <TextView
+        android:id="@+id/editEventText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="Edit Event"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/editEventButton"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/editEventIcon" />
 
 
 </android.support.constraint.ConstraintLayout>
