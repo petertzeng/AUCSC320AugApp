@@ -33,7 +33,5 @@ public class CategoryButtonListener implements View.OnClickListener {
             }
         });
     }
-
-
 }
 
