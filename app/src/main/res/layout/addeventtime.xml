@@ -17,9 +17,7 @@
         android:background="@drawable/greentaskbar"
         android:gravity="center|left"
         android:scaleType="centerCrop"
-        android:text="  Enter Event Time"
         android:textColor="@color/uofaGold"
-        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -84,7 +82,21 @@
         app:layout_constraintBottom_toBottomOf="@id/eventBanner"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="125dp" />
+        tools:layout_editor_absoluteX="125dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Enter A Time"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/eventBanner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:textColor="@color/uofaGold"
+        android:textSize="30sp"/>
 
 
 </android.support.constraint.ConstraintLayout>
