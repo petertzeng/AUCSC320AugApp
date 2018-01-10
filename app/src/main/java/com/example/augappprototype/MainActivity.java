@@ -3,20 +3,19 @@ package com.example.augappprototype;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Toast;
+
 
 import com.example.augappprototype.Listeners.AddEventListener;
 import com.example.augappprototype.Listeners.CalendarButtonListener;
 import com.example.augappprototype.Listeners.EditEventButtonListener;
 import com.roomorama.caldroid.CaldroidFragment;
-import com.roomorama.caldroid.CaldroidListener;
+
 
 import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-
+    public boolean isGuest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.addEventButton).setOnClickListener(new AddEventListener(this));
         findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
+        if (!isGuest){
+            disableEditButton();
+        }
     }
 
     private void convertCalendar() {
@@ -47,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         caldroidFragment.setMaxDate(firstDate2);
 
         caldroidFragment.setCaldroidListener(new CalendarButtonListener(this));
-
+    }
+    public void disableEditButton(){
+        findViewById(R.id.editEventButton).setEnabled(false);
     }
 }

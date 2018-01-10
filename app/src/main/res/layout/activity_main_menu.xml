@@ -54,7 +54,7 @@
         app:srcCompat="@drawable/calendaricon" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/newsletterImage"
         android:layout_width="114dp"
         android:layout_height="119dp"
         android:layout_marginBottom="8dp"
@@ -70,7 +70,7 @@
         app:srcCompat="@drawable/newsletterpng" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/websiteImage"
         android:layout_width="120dp"
         android:layout_height="101dp"
         android:layout_marginBottom="8dp"
@@ -86,7 +86,7 @@
         app:srcCompat="@drawable/wwwclipart" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/libraryImage"
         android:layout_width="140dp"
         android:layout_height="136dp"
         android:layout_marginBottom="52dp"
