@@ -38,7 +38,7 @@
         app:srcCompat="@drawable/logocolor" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/eventsCalendarImage"
         android:layout_width="125dp"
         android:layout_height="133dp"
         android:layout_marginBottom="8dp"
