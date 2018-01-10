@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -93,11 +94,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
       GoogleSignInAccount account = result.getSignInAccount();
       String userName = account.getDisplayName();
       String userEmail = account.getEmail();
-    //  String imgURL = account.getPhotoUrl().toString();
       name.setText(userName);
       email.setText(userEmail);
-    //  Glide.with(this).load(imgURL).into(profilePicture);
-          // gitHub extension for loading profile pictures
+      Glide.with(this).load(account.getPhotoUrl()).into(profilePicture);
       updateUI(true);
     } else {
       updateUI(false);
