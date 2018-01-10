@@ -21,6 +21,7 @@ public class GuestButtonListener extends MainActivity implements View.OnClickLis
     public GuestButtonListener(LoginScreen loginScreen){
         this.loginScreen = loginScreen;
     }
+    public static boolean isGuest;
 
     @Override
     public void onClick(View v) {
