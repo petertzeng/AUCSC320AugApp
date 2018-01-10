@@ -20,7 +20,7 @@
         android:layout_width="fill_parent"
         android:layout_height="100dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/taskbar"
+        android:background="@drawable/greentaskbar"
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -32,7 +32,7 @@
         android:layout_width="fill_parent"
         android:layout_height="73dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/bottom"
+        android:background="@drawable/greenbottom"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -62,7 +62,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="24dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/image"
+        android:background="@drawable/categorygold"
         app:layout_constraintBottom_toBottomOf="@+id/top"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -76,7 +76,7 @@
         android:layout_marginStart="8dp"
         android:text="Add Event"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/uofaGold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
         app:layout_constraintBottom_toTopOf="@+id/addeventtext"
         app:layout_constraintStart_toStartOf="@+id/addEventButton"
         app:layout_constraintTop_toTopOf="@+id/addEventButton"
-        app:srcCompat="@drawable/plus" />
+        app:srcCompat="@drawable/goldplus" />
 
     <Button
         android:id="@+id/editEventButton"
@@ -116,7 +116,7 @@
         app:layout_constraintBottom_toTopOf="@+id/addeventtext"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="@+id/addEventButton"
-        app:srcCompat="@drawable/editevent" />
+        app:srcCompat="@drawable/goldeditevent" />
 
     <TextView
         android:id="@+id/editEventText"
@@ -126,7 +126,7 @@
         android:layout_marginStart="8dp"
         android:text="Edit Event"
         android:textSize="20sp"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/uofaGold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/editEventButton"
         app:layout_constraintStart_toStartOf="@id/guideline2"
