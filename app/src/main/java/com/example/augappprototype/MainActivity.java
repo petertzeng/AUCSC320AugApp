@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
         if (!isGuest){
-            disableEditButton();
+            disableButtons();
         }
     }
 
@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
 
         caldroidFragment.setCaldroidListener(new CalendarButtonListener(this));
     }
-    public void disableEditButton(){
+    public void disableButtons(){
         findViewById(R.id.editEventButton).setEnabled(false);
+        findViewById(R.id.addEventButton).setEnabled(false);
     }
 }
