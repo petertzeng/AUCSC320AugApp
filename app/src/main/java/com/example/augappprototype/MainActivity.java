@@ -10,6 +10,7 @@ import com.example.augappprototype.Listeners.AddEventListener;
 import com.example.augappprototype.Listeners.CalendarButtonListener;
 import com.example.augappprototype.Listeners.CategoryButtonListener;
 import com.example.augappprototype.Listeners.EditEventButtonListener;
+import com.example.augappprototype.Listeners.GuestButtonListener;
 import com.roomorama.caldroid.CaldroidFragment;
 
 
@@ -17,7 +18,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
-    public boolean isGuest;
+    boolean isGuest = GuestButtonListener.isGuest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.categoryButton).setOnClickListener(new CategoryButtonListener(this));
         findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
-        if (!isGuest){
-            disableButtons();
-        }
+       // if (isGuest){
+          //  disableButtons();
+     //   }
     }
 
     private void convertCalendar() {
