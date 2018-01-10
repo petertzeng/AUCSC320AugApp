@@ -15,7 +15,7 @@
         android:background="@drawable/greentaskbar"
         android:gravity="center|left"
         android:scaleType="centerCrop"
-        android:text="  Enter Event Details"
+        android:text="  Edit Event Details"
         android:textColor="@color/uofaGold"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/bottom"

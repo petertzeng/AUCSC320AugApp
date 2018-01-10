@@ -14,12 +14,10 @@
         android:layout_height="73dp"
         android:layout_marginBottom="8dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/taskbar"
+        android:background="@drawable/greentaskbar"
         android:gravity="center|left"
         android:scaleType="centerCrop"
-        android:text="  Enter Event Time"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
+        android:textColor="@color/uofaGold"
         app:layout_constraintBottom_toTopOf="@+id/bottom"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -32,11 +30,11 @@
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/taskbar"
+        android:background="@drawable/greentaskbar"
         android:onClick="closeWindowListener"
         android:scaleType="centerCrop"
         android:text="Close Window"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/uofaGold"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -47,10 +45,10 @@
         android:layout_width="0dp"
         android:layout_height="73dp"
         android:adjustViewBounds="true"
-        android:background="@drawable/taskbar"
+        android:background="@drawable/greentaskbar"
         android:scaleType="centerCrop"
         android:text="Continue"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/uofaGold"
         android:textSize="15sp"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="@+id/guideline"
@@ -74,6 +72,31 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/eventBanner"/>
+
+    <ImageView
+        android:id="@+id/timeImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="32dp"
+        app:srcCompat="@drawable/timegold"
+        app:layout_constraintBottom_toBottomOf="@id/eventBanner"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="125dp"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Enter A Time"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/eventBanner"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:textColor="@color/uofaGold"
+        android:textSize="30sp"/>
 
 
 </android.support.constraint.ConstraintLayout>
