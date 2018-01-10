@@ -132,5 +132,15 @@
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editEventIcon" />
 
+    <ImageView
+        android:id="@+id/buttonCover"
+        android:layout_width="498dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="492dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background = "#007C41"
+        android:visibility="invisible"/>
+
 
 </android.support.constraint.ConstraintLayout>

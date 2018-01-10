@@ -3,6 +3,7 @@ package com.example.augappprototype;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 
 import com.example.augappprototype.Listeners.AddEventListener;
@@ -55,5 +56,6 @@ public class MainActivity extends AppCompatActivity {
     public void disableButtons(){
         findViewById(R.id.editEventButton).setEnabled(false);
         findViewById(R.id.addEventButton).setEnabled(false);
+        findViewById(R.id.buttonCover).setVisibility(View.VISIBLE);
     }
 }

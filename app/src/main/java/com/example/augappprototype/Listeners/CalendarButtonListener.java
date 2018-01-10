@@ -32,7 +32,7 @@ public class CalendarButtonListener extends CaldroidListener {
         final Dialog addEventDialog = new Dialog(mainActivity);
         addEventDialog.setContentView(R.layout.eventpopup);
         addEventDialog.show();
-        eventTextview();
+        //eventTextview();
         Date converted = convertDate(date);
         if (dayEvents(converted) == true) {
 
@@ -57,7 +57,7 @@ public class CalendarButtonListener extends CaldroidListener {
     public Date convertDate(Date date){
         return new Date(date.getYear(), date.getMonth(), date.getDate());
     }
-
+/**
     public void eventTextview(){
         int countEvents = 0;
         for (Date event: AddEventListener.events.keySet() ) {
@@ -76,6 +76,7 @@ public class CalendarButtonListener extends CaldroidListener {
                 Toast.LENGTH_SHORT).show();
     }
 
+*/
 
 
 }
