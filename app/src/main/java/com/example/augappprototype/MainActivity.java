@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.categoryButton).setOnClickListener(new CategoryButtonListener(this));
         findViewById(R.id.editEventButton).setOnClickListener(new EditEventButtonListener(this));
         convertCalendar();
-       // if (isGuest){
-          //  disableButtons();
-     //   }
+        if (isGuest){
+            disableButtons();
+        }
     }
 
     private void convertCalendar() {
