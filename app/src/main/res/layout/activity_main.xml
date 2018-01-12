@@ -7,7 +7,7 @@
     tools:context="com.example.augappprototype.MainActivity">
 
     <CalendarView
-        android:id="@+id/calendar1"
+        android:id="@+id/caldroidCalendar"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/bottom"
@@ -67,6 +67,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.617" />
+
 
     <TextView
         android:id="@+id/addeventtext"
@@ -132,15 +133,17 @@
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/editEventIcon" />
 
-    <ImageView
-        android:id="@+id/buttonCover"
-        android:layout_width="498dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="492dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background = "#007C41"
-        android:visibility="invisible"/>
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/backicon"
+        app:layout_constraintBottom_toBottomOf="@+id/top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>

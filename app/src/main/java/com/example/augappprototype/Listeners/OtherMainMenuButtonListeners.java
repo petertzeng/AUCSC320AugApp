@@ -17,6 +17,6 @@ public class OtherMainMenuButtonListeners implements View.OnClickListener{
     }
     @Override
     public void onClick(View v) {
-        Toast.makeText(mainMenu, "COMING SOON!", Toast.LENGTH_LONG).show();
+        Toast.makeText(mainMenu, "COMING SOON!", Toast.LENGTH_SHORT).show();
     }
 }
